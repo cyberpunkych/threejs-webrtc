@@ -10,7 +10,7 @@ class FirstPersonControls {
 
         this.paused = false
 
-        this.cameraHeight = 1.5
+        this.cameraHeight = 5.5
 
         this.raycaster = new THREE.Raycaster()
 

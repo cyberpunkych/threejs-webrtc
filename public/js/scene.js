@@ -76,10 +76,10 @@ class Scene {
 
   // add a client meshes, a video element and  canvas for three.js video texture
   addClient(id) {
-    let videoMaterial = makeVideoMaterial(id);
+    // let videoMaterial = makeVideoMaterial(id);
     let otherMat = new THREE.MeshNormalMaterial();
 
-    let head = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), [otherMat,otherMat,otherMat,otherMat,otherMat,videoMaterial]);
+    let head = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), [otherMat,otherMat,otherMat,otherMat,otherMat,otherMat]);
 
     // set position of head before adding to parent object
     head.position.set(0, 0, 0);
@@ -92,7 +92,7 @@ class Scene {
     this.scene.add(group);
 
     peers[id].group = group;
-    
+
     peers[id].previousPosition = new THREE.Vector3();
     peers[id].previousRotation = new THREE.Quaternion();
     peers[id].desiredPosition = new THREE.Vector3();
@@ -181,7 +181,7 @@ class Scene {
     updateEnvironment();
 
     if (this.frameCount % 25 === 0) {
-      this.updateClientVolumes();
+      // this.updateClientVolumes();
     }
 
     this.interpolatePositions();

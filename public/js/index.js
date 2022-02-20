@@ -46,7 +46,7 @@ window.onload = async () => {
   // first get user media
   localMediaStream = await getMedia(mediaConstraints);
 
-  createLocalVideoElement();
+  // createLocalVideoElement();
 
   // then initialize socket connection
   initSocketConnection();
@@ -231,7 +231,7 @@ function enableOutgoingStream() {
 
 function onPlayerMove() {
   // console.log('Sending movement update to server.');
-  
+
 }
 
 //////////////////////////////////////////////////////////////////////
